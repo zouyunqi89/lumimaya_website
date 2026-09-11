@@ -25,3 +25,20 @@ Planning notes: ~/Desktop/fashion_project (Obsidian vault, PARA)
 - Placeholders to replace before launch are listed in README.md
 - **TODO:** GitHub repo URL needed to push (user to create repo `lumimaya_website`)
 - **TODO:** browser test of every button (next step)
+
+### 13:30 — Browser test pass (via Kimi WebBridge on localhost:8000)
+- Fixed during testing:
+  1. `.btn-gold { flex:1 }` stretched the hero CTA to 221px tall → scoped to `.p-actions`
+  2. Product-page WhatsApp link did not reflect selected colour/size → `updateWaLink` was trapped in callback scope; now module-level, called on every chip change
+  3. Recommendations could render fewer than 6 → filled with best sellers
+  4. Product page dynamic text (meta, wishlist label) did not follow language toggle → re-render on `langchange`
+- Verified working (all green, zero JS errors):
+  - Home: hero dots, carousel arrows, add-to-cart, cart badge, wishlist toggle, EN/中文 toggle, subscribe valid+invalid, WhatsApp float link
+  - All 8 pages: every internal link, anchor (#faq/#shipping/#terms etc.) and image resolves (automated crawl)
+  - Shop: 7 tabs, category/colour/size filters, sort asc/desc, pagination (page buttons, prev/next, boundary), wishlist-only view, filter collapse, grid add-to-cart
+  - Product: gallery thumbnails, collapsible blocks, colour/size chips, quantity stepper, add-to-cart with exact variant, WhatsApp link per selection, swatch order link, wishlist, recommendations, not-found state
+  - Contact: FAQ accordion, form validation (empty fields, bad email, consent), success flow, 12-product interest dropdown, contact WhatsApp link
+  - Cart: empty state, filled state, subtotal math (RM), quantity stepper, remove, WhatsApp checkout message, return to empty
+  - About: WhatsApp CTA link
+  - Mobile (390px emulation): hamburger menu open/close, bottom tab bar visible, layout renders correctly in Chinese
+- Preview server: `python3 -m http.server 8000` in project dir (leave running for local preview)

@@ -193,7 +193,8 @@ button { font-family: inherit; cursor: pointer; }
   border: none; border-radius: 6px; padding: 9px 14px;
   font-size: .8rem; letter-spacing: .04em;
 }
-.btn-gold { background: var(--gold); color: #fff; flex: 1; }
+.btn-gold { background: var(--gold); color: #fff; }
+.p-actions .btn-gold { flex: 1; }
 .btn-gold:hover { background: var(--gold-dark); }
 .btn-teal { background: var(--teal); color: #fff; }
 .btn-teal:hover { background: var(--teal-light); }

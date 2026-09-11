@@ -1,6 +1,7 @@
 /* Product detail page */
 let p = null;
 let selColor = null, selSize = null;
+let updateWaLink = () => {}; // replaced once the DOM is ready (see below)
 
 document.addEventListener("DOMContentLoaded", () => {
   const id = new URLSearchParams(location.search).get("id");
@@ -54,11 +55,13 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => { btn.textContent = t("p.addcart"); }, 1200);
   });
 
-  // whatsapp
-  const waMsg = "Hello Lumimaya! I'm interested in " + p.no + " " + p.name +
-    " (colour: " + selColor + ", size: " + selSize + "). Is it available?";
+  // whatsapp — link always reflects the current colour/size selection
   const waBtn = document.getElementById("waBtn");
-  waBtn.href = whatsappLink(waMsg);
+  updateWaLink = () => {
+    waBtn.href = whatsappLink("Hello Lumimaya! I'm interested in " + p.no + " " + p.name +
+      " (colour: " + selColor + ", size: " + selSize + "). Is it available?");
+  };
+  updateWaLink();
   document.getElementById("swatchBtn").href = whatsappLink(
     "Hello Lumimaya! I'd like to order fabric swatches / the style handbook. Product: " + p.no + " " + p.name + ".");
 
@@ -72,10 +75,16 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   wishBtn.addEventListener("click", () => { Store.toggleWishlist(p.id); refreshWish(); });
   document.addEventListener("wishchange", refreshWish);
+  document.addEventListener("langchange", () => { renderDetail(); refreshWish(); });
   refreshWish();
 
-  // recommended pairings (same category or scene, exclude self)
-  const reco = PRODUCTS.filter(x => x.id !== p.id && (x.category === p.category || x.scene === p.scene)).slice(0, 6);
+  // recommended pairings (same category or scene first, then best sellers, exclude self)
+  let reco = PRODUCTS.filter(x => x.id !== p.id && (x.category === p.category || x.scene === p.scene));
+  for (const b of PRODUCTS.filter(x => x.isBestSeller)) {
+    if (reco.length >= 6) break;
+    if (b.id !== p.id && !reco.includes(b)) reco.push(b);
+  }
+  reco = reco.slice(0, 6);
   const track = document.getElementById("recoTrack");
   track.innerHTML = reco.map(cardHtml).join("");
   bindCardButtons(track);
@@ -107,6 +116,7 @@ function renderDetail() {
     b.addEventListener("click", () => {
       selColor = b.dataset.color;
       document.getElementById("colorOpts").querySelectorAll("button").forEach(x => x.classList.toggle("selected", x === b));
+      if (typeof updateWaLink === "function") updateWaLink();
     });
   });
   document.getElementById("sizeOpts").innerHTML = p.sizes.map(s =>
@@ -116,6 +126,7 @@ function renderDetail() {
     b.addEventListener("click", () => {
       selSize = b.dataset.size;
       document.getElementById("sizeOpts").querySelectorAll("button").forEach(x => x.classList.toggle("selected", x === b));
+      if (typeof updateWaLink === "function") updateWaLink();
     });
   });
 }
