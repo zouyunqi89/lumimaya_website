@@ -42,3 +42,7 @@ Planning notes: ~/Desktop/fashion_project (Obsidian vault, PARA)
   - About: WhatsApp CTA link
   - Mobile (390px emulation): hamburger menu open/close, bottom tab bar visible, layout renders correctly in Chinese
 - Preview server: `python3 -m http.server 8000` in project dir (leave running for local preview)
+
+### 13:40 — Pushed to GitHub
+- `git push -u origin main` to git@github.com:zouyunqi89/lumimaya_website.git (repo auto-created via push-to-create; **currently private** — flip to public in GitHub settings if needed for Pages hosting)
+- Remote verified in sync (ls-remote matches local HEAD c51aab4)
