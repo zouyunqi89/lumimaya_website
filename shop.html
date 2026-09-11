@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop All — Lumimaya</title>
+<meta name="description" content="Shop Lumimaya: modest fashion, baju kurung, kebaya, tudung, daily and office wear. Filter by category, colour, size and occasion.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%2316404d'/><circle cx='12' cy='12' r='5' fill='%23c9a227'/></svg>">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html"><span class="brand-dot"></span><span class="brand-name">Lumimaya</span></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="shop.html" class="active" data-i18n="nav.shop">Shop</a>
+      <a href="about.html" data-i18n="nav.about">About Us</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact Us</a>
+    </nav>
+    <div class="header-actions">
+      <button class="lang-toggle" id="langToggle">中文</button>
+      <a class="icon-btn" href="cart.html" aria-label="cart">🛒<span class="badge hidden">0</span></a>
+      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <h2 class="section-title" style="margin-top:30px" data-i18n="shop.title">Shop All</h2>
+
+  <div class="shop-tabs" id="shopTabs">
+    <button class="shop-tab active" data-tab="all" data-i18n="shop.tab.all">View All</button>
+    <button class="shop-tab" data-tab="new" data-i18n="shop.tab.new">What's New</button>
+    <button class="shop-tab" data-tab="daily" data-i18n="shop.tab.daily">Daily Wear</button>
+    <button class="shop-tab" data-tab="holiday" data-i18n="shop.tab.holiday">Holiday</button>
+    <button class="shop-tab" data-tab="festive" data-i18n="shop.tab.festive">Festive 节日庆典</button>
+    <button class="shop-tab" data-tab="office" data-i18n="shop.tab.office">Office</button>
+    <button class="shop-tab" data-tab="bestseller" data-i18n="home.bestseller">Best Seller</button>
+  </div>
+
+  <div class="shop-layout">
+    <aside id="filterPanel">
+      <div class="filter-group">
+        <h4 data-i18n="f.availability">Availability</h4>
+        <div class="filter-body">
+          <label><input type="checkbox" id="fInStock" checked> <span data-i18n="f.instock">In stock</span></label>
+        </div>
+      </div>
+      <div class="filter-group">
+        <h4 data-i18n="f.category">Category <span class="chev">▾</span></h4>
+        <div class="filter-body" id="fCategories"></div>
+      </div>
+      <div class="filter-group">
+        <h4 data-i18n="f.scene">Occasion <span class="chev">▾</span></h4>
+        <div class="filter-body" id="fScenes"></div>
+      </div>
+      <div class="filter-group">
+        <h4 data-i18n="f.color">Colour <span class="chev">▾</span></h4>
+        <div class="filter-body" id="fColors"></div>
+      </div>
+      <div class="filter-group">
+        <h4 data-i18n="f.size">Size <span class="chev">▾</span></h4>
+        <div class="filter-body" id="fSizes"></div>
+      </div>
+      <div class="filter-group">
+        <div class="filter-body">
+          <label><input type="checkbox" id="fWishOnly"> <span data-i18n="f.wishlistonly">Show wishlist only</span></label>
+        </div>
+      </div>
+    </aside>
+
+    <section>
+      <div class="shop-toolbar">
+        <span><span id="resultCount">0</span> <span data-i18n="shop.results">products</span></span>
+        <label><span data-i18n="shop.sort">Sort</span>&nbsp;
+          <select id="sortSelect">
+            <option value="featured" data-i18n="sort.featured">Featured</option>
+            <option value="low" data-i18n="sort.low">Price: Low to High</option>
+            <option value="high" data-i18n="sort.high">Price: High to Low</option>
+          </select>
+        </label>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="no-results hidden" id="noResults" data-i18n="shop.noresults">No products match your filters. Try adjusting them.</div>
+      <div class="pagination" id="pagination"></div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h4 data-i18n="footer.services">Services</h4>
+      <ul>
+        <li><a href="contact.html#contact-form" data-i18n="footer.contact">Contact Us</a></li>
+        <li><a href="contact.html#shipping" data-i18n="footer.shipping">Shipping Information</a></li>
+        <li><a href="exchange-return.html" data-i18n="footer.returns">Returns / Exchanges</a></li>
+        <li><a href="contact.html#faq" data-i18n="footer.faq">FAQs</a></li>
+        <li><a href="contact.html#contact-form" data-i18n="footer.custom">Customised service</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer.information">Information</h4>
+      <ul>
+        <li><a href="about.html" data-i18n="footer.about">About Us</a></li>
+        <li><a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
+        <li><a href="privacy.html#terms" data-i18n="footer.terms">Terms and Conditions</a></li>
+        <li><a href="exchange-return.html" data-i18n="footer.exch">Exchange &amp; Return Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer.subscribe">Subscribe</h4>
+      <p style="font-size:.85rem;color:#4c5548" data-i18n="footer.subtext">Be first to know about new collections and offers</p>
+      <form class="subscribe-row" id="subscribeForm" style="margin-top:10px">
+        <input type="email" placeholder="enter email here" aria-label="email">
+        <button type="submit" data-i18n="footer.subbtn">Subscribe</button>
+      </form>
+      <div class="subscribe-msg" id="subscribeMsg"></div>
+      <div class="social-row">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+        <a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok">♪</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom"><span data-i18n="misc.copyright">© 2026 Lumimaya. All rights reserved.</span></div>
+</footer>
+
+<a class="whatsapp-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">✆</a>
+
+<nav class="mobile-tabbar">
+  <a href="index.html"><span class="t-icon">⌂</span>home</a>
+  <a href="shop.html" class="active"><span class="t-icon">▦</span>shop</a>
+  <a href="cart.html"><span class="t-icon">🛒</span>cart</a>
+  <a href="contact.html"><span class="t-icon">✉</span>service</a>
+</nav>
+
+<script src="js/products.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/store.js"></script>
+<script src="js/main.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>

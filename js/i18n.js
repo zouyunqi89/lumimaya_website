@@ -1,0 +1,167 @@
+/* Lumimaya bilingual dictionary + language toggle */
+const I18N = {
+  en: {
+    "nav.shop": "Shop", "nav.about": "About Us", "nav.contact": "Contact Us",
+    "nav.cart": "Shopping cart", "nav.menu": "Menu",
+    "hero.slogan": "Have a dream? Let me help you make it real — your one-stop garment customisation solution.",
+    "hero.cta": "Shop Now",
+    "home.whatsnew": "What's New", "home.bestseller": "Best Seller",
+    "home.viewall": "VIEW ALL PRODUCT",
+    "home.services": "Our Services",
+    "svc.consult": "Expert Consultation", "svc.custom": "Custom Design", "svc.smallbatch": "Small-batch Orders",
+    "svc.support": "Supporting Services", "svc.payment": "Payment", "svc.shipping": "Shipping Policy", "svc.return": "Return / Exchange",
+    "shop.title": "Shop All",
+    "shop.tab.all": "View All", "shop.tab.new": "What's New", "shop.tab.daily": "Daily Wear",
+    "shop.tab.holiday": "Holiday", "shop.tab.festive": "Festive 节日庆典", "shop.tab.office": "Office",
+    "shop.filters": "Filters",
+    "f.availability": "Availability", "f.instock": "In stock", "f.category": "Category",
+    "f.scene": "Occasion", "f.color": "Colour", "f.size": "Size",
+    "f.wishlistonly": "Show wishlist only",
+    "shop.sort": "Sort", "sort.featured": "Featured", "sort.low": "Price: Low to High", "sort.high": "Price: High to Low",
+    "shop.results": "products",
+    "shop.noresults": "No products match your filters. Try adjusting them.",
+    "p.addcart": "Add to my cart", "p.wish": "Add to wishlist", "p.wished": "In wishlist",
+    "p.choosecolor": "Select colour", "p.size": "Size", "p.qty": "Quantity",
+    "p.care": "Care Instruction", "p.desc": "Description", "p.fabric": "Fabric",
+    "p.reco": "You may also like", "p.b2b": "B2B: fabric swatches and style handbook are available — contact us on WhatsApp. Batch purchase order forms can be generated from this page.",
+    "p.swatches": "Order fabric swatches",
+    "p.backshop": "Back to shop",
+    "p.notfound": "Product not found.", "p.rm": "RM",
+    "cart.title": "Shopping Cart", "cart.empty": "Your cart is empty — go have a look around!",
+    "cart.emptycta": "Go shopping", "cart.contact": "Questions? Contact us",
+    "cart.thumb": "Item", "cart.remove": "Remove",
+    "cart.subtotal": "Subtotal", "cart.shipping": "Shipping", "cart.shippingnote": "calculated at checkout via WhatsApp",
+    "cart.total": "Total", "cart.checkout": "Checkout via WhatsApp",
+    "cart.continue": "Continue shopping",
+    "about.title": "About Us",
+    "about.mission": "Our Mission",
+    "about.mission.t": "Everyone can be a dreamer — if you want to create, you can become a design master. Lumimaya turns your clothing ideas into well-made reality.",
+    "about.devcap": "Design & Development Capability",
+    "about.devcap.t": "From sketch to tech pack: pattern making, sampling, fabric sourcing and fitting — a complete in-house development process.",
+    "about.supply": "Supply Chain",
+    "about.supply.t": "Trusted fabric mills and workshops in Guangzhou and Malaysia, giving us flexible capacity from one-off custom pieces to small-batch production.",
+    "about.service": "Supporting Services",
+    "about.service.t": "Body-measurement guidance, fabric swatches, packaging, label making and alteration support — everything around the garment is covered too.",
+    "about.process": "How to Order",
+    "about.process.t": "1. Browse or share your idea → 2. Consultation & quotation → 3. Confirmation & deposit → 4. Production / custom making → 5. Balance payment & delivery. Questions anytime via WhatsApp.",
+    "contact.title": "Contact Us",
+    "contact.faq": "Frequently Asked Questions",
+    "faq.q1": "How do I place an order?", "faq.a1": "Add products to your cart and check out via WhatsApp, or leave us a message below — we will confirm details, price and delivery with you personally.",
+    "faq.q2": "Shipping fee", "faq.a2": "Shipping within Malaysia is calculated by weight and destination; we confirm the exact fee with your order on WhatsApp. Free shipping promotions are announced on our social media.",
+    "faq.q3": "Returns & exchanges", "faq.a3": "Size/style exchanges and returns for defective or wrongly-shipped items are supported within 7 days of delivery — see our Exchange & Return policy page for details.",
+    "faq.q4": "Other services", "faq.a4": "Custom design, small-batch production, packaging services and label making are all available. Tell us what you need.",
+    "faq.q5": "Packaging service", "faq.a5": "Gift wrapping and branded packaging options are available for orders — mention it when you check out.",
+    "faq.q6": "Label making", "faq.a6": "We offer custom woven and printed labels for your own brand — minimum order quantities apply, contact us for a quote.",
+    "contact.info": "My Contact",
+    "contact.phone": "Phone", "contact.email": "Email", "contact.wa": "WhatsApp",
+    "contact.form": "Leave a Message",
+    "form.name": "Name", "form.company": "Company", "form.email": "Email", "form.region": "Region",
+    "form.role": "Your role", "form.interest": "Product of interest",
+    "form.interest.ph": "Please select", "form.question": "Your question",
+    "form.consent": "I have read and agree to the Lumimaya Privacy Policy",
+    "form.submit": "Submit", "form.required": "This field is required", "form.emailbad": "Please enter a valid email",
+    "form.success": "Thank you! Your message has been prepared — your email app will open to send it to us. Or reach us directly on WhatsApp.",
+    "footer.services": "Services", "footer.information": "Information",
+    "footer.contact": "Contact Us", "footer.shipping": "Shipping Information", "footer.returns": "Returns / Exchanges", "footer.faq": "FAQs", "footer.custom": "Customised service",
+    "footer.about": "About Us", "footer.privacy": "Privacy Policy", "footer.terms": "Terms and Conditions", "footer.exch": "Exchange & Return Policy",
+    "footer.subscribe": "Subscribe",
+    "footer.subtext": "Be first to know about new collections and offers",
+    "footer.subbtn": "Subscribe", "footer.subok": "Thank you for subscribing!",
+    "footer.suberr": "Please enter a valid email address",
+    "misc.copyright": "© 2026 Lumimaya. All rights reserved."
+  },
+  zh: {
+    "nav.shop": "商店", "nav.about": "关于我们", "nav.contact": "联系我们",
+    "nav.cart": "购物车", "nav.menu": "菜单",
+    "hero.slogan": "你有梦想吗？我来帮你实现它 —— 服装定制一站式解决方案。",
+    "hero.cta": "立即选购",
+    "home.whatsnew": "新品推荐", "home.bestseller": "畅销款",
+    "home.viewall": "查看全部商品",
+    "home.services": "我们的服务",
+    "svc.consult": "专业咨询", "svc.custom": "专属定制", "svc.smallbatch": "小批量订",
+    "svc.support": "配套服务", "svc.payment": "付款", "svc.shipping": "运费政策", "svc.return": "退/换货",
+    "shop.title": "全部商品",
+    "shop.tab.all": "查看全部", "shop.tab.new": "新品", "shop.tab.daily": "日常穿搭",
+    "shop.tab.holiday": "度假", "shop.tab.festive": "节日庆典", "shop.tab.office": "办公",
+    "shop.filters": "筛选",
+    "f.availability": "库存", "f.instock": "有货", "f.category": "分类",
+    "f.scene": "穿着场景", "f.color": "颜色", "f.size": "尺码",
+    "f.wishlistonly": "只看已收藏",
+    "shop.sort": "排序", "sort.featured": "默认", "sort.low": "价格从低到高", "sort.high": "价格从高到低",
+    "shop.results": "件商品",
+    "shop.noresults": "没有符合筛选条件的商品，请调整筛选。",
+    "p.addcart": "加入购物车", "p.wish": "加入收藏", "p.wished": "已收藏",
+    "p.choosecolor": "选择花色", "p.size": "尺码", "p.qty": "数量",
+    "p.care": "养护说明", "p.desc": "产品描述", "p.fabric": "面料成分",
+    "p.reco": "推荐搭配", "p.b2b": "B2B 批发：提供布料小样与款式手册，批量采购可在此页生成采购清单，详情请 WhatsApp 联系我们。",
+    "p.swatches": "订购布料小样",
+    "p.backshop": "返回商店",
+    "p.notfound": "未找到该商品。", "p.rm": "RM",
+    "cart.title": "购物车", "cart.empty": "您还没有添加商品，先去逛逛吧！",
+    "cart.emptycta": "去逛逛", "cart.contact": "更多问题，请联系我",
+    "cart.thumb": "商品", "cart.remove": "删除",
+    "cart.subtotal": "小计", "cart.shipping": "运费", "cart.shippingnote": "下单时经 WhatsApp 确认",
+    "cart.total": "合计", "cart.checkout": "通过 WhatsApp 下单",
+    "cart.continue": "继续购物",
+    "about.title": "关于我们",
+    "about.mission": "我们的使命",
+    "about.mission.t": "每一个人都可以成为梦想家，只要你想做，你就可以成为设计大师。Lumimaya 帮你把服装梦想变成现实。",
+    "about.devcap": "开发能力",
+    "about.devcap.t": "从设计图到工艺单：制版、打样、面料采购、试身修改，完整的自主开发流程。",
+    "about.supply": "供应链",
+    "about.supply.t": "依托广州与马来西亚两地可靠的面料商与工厂，从一件定制到小批量生产都能灵活安排。",
+    "about.service": "配套服务",
+    "about.service.t": "量体教程、布料小样、包装服务、商标制作与修改服务——服装以外的一切我们也为你想到。",
+    "about.process": "订购流程",
+    "about.process.t": "1. 浏览商品或说出你的想法 → 2. 咨询与报价 → 3. 确认并付订金 → 4. 生产/定制 → 5. 付尾款并发货。任何疑问随时 WhatsApp 联系。",
+    "contact.title": "联系我们",
+    "contact.faq": "常见问题",
+    "faq.q1": "如何下订单？", "faq.a1": "把商品加入购物车后通过 WhatsApp 下单，或在下方留言咨询——我们会与你逐一确认款式、价格与配送。",
+    "faq.q2": "运费说明", "faq.a2": "马来西亚境内按重量与目的地计算，下单时经 WhatsApp 确认具体金额；免运活动会在社交媒体上公布。",
+    "faq.q3": "退换货", "faq.a3": "支持 7 天内因尺寸/款式换货，以及瑕疵品、错发商品退货——详见《退换货政策》页面。",
+    "faq.q4": "其他服务", "faq.a4": "专属定制、小批量生产、包装服务、商标制作均可提供，告诉我们你的需求即可。",
+    "faq.q5": "包装服务", "faq.a5": "可提供礼品包装与品牌包装选项，下单时备注即可。",
+    "faq.q6": "商标制作", "faq.a6": "提供织唛与印刷标签定制，适合自有品牌，有起订量要求，欢迎询价。",
+    "contact.info": "我的联系方式",
+    "contact.phone": "电话", "contact.email": "邮箱", "contact.wa": "WhatsApp",
+    "contact.form": "留言咨询",
+    "form.name": "姓名", "form.company": "公司", "form.email": "邮箱", "form.region": "所在地区",
+    "form.role": "您的职位", "form.interest": "您感兴趣的产品",
+    "form.interest.ph": "请选择", "form.question": "您的问题",
+    "form.consent": "我已经阅读并同意 Lumimaya《隐私政策》",
+    "form.submit": "提交", "form.required": "此项为必填", "form.emailbad": "请输入有效的邮箱地址",
+    "form.success": "谢谢！已为您准备好邮件内容——邮箱应用将打开发送给我们。也可以直接通过 WhatsApp 联系我们。",
+    "footer.services": "服务", "footer.information": "资讯",
+    "footer.contact": "联系我们", "footer.shipping": "运费说明", "footer.returns": "退换货", "footer.faq": "常见问题", "footer.custom": "定制服务",
+    "footer.about": "关于我们", "footer.privacy": "隐私政策", "footer.terms": "条款与条件", "footer.exch": "退换货政策",
+    "footer.subscribe": "订阅",
+    "footer.subtext": "第一时间了解新品与优惠",
+    "footer.subbtn": "订阅", "footer.subok": "感谢您的订阅！",
+    "footer.suberr": "请输入有效的邮箱地址",
+    "misc.copyright": "© 2026 Lumimaya 版权所有"
+  }
+};
+
+const WHATSAPP_NUMBER = "60123456789"; // TODO confirm: real WhatsApp business number
+
+function getLang() { return localStorage.getItem("lumimaya-lang") || "en"; }
+function t(key) {
+  const lang = getLang();
+  return (I18N[lang] && I18N[lang][key]) || I18N.en[key] || key;
+}
+function applyI18n() {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    el.textContent = t(el.dataset.i18n);
+  });
+  document.querySelectorAll("[data-i18n-ph]").forEach(el => {
+    el.placeholder = t(el.dataset.i18nPh);
+  });
+  document.documentElement.lang = getLang();
+  const btn = document.getElementById("langToggle");
+  if (btn) btn.textContent = getLang() === "en" ? "中文" : "EN";
+}
+function toggleLang() {
+  localStorage.setItem("lumimaya-lang", getLang() === "en" ? "zh" : "en");
+  applyI18n();
+  document.dispatchEvent(new CustomEvent("langchange"));
+}
