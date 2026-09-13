@@ -46,3 +46,9 @@ Planning notes: ~/Desktop/fashion_project (Obsidian vault, PARA)
 ### 13:40 — Pushed to GitHub
 - `git push -u origin main` to git@github.com:zouyunqi89/lumimaya_website.git (repo auto-created via push-to-create; **currently private** — flip to public in GitHub settings if needed for Pages hosting)
 - Remote verified in sync (ls-remote matches local HEAD c51aab4)
+
+### 2026-09-13 — Competitor website analysis (research for next iteration)
+- Analyzed 9 competitor official sites live via browser (Poplook, Bayu Somerset, Whimsigirl, Naelofar, dUCk [defunct], Siti Khadijah, TudungPeople, Mimpikita, Ariani) + desk research (market data, WhatsApp commerce, PDP CRO)
+- Results written to the Obsidian vault: per-brand notes `<Brand>/Website Analysis_网站分析.md` in Malaysia Brand Research; synthesis `E-commerce UX Research_电商体验研究.md`; wikilinked hub `Lumimaya Website Design/Competitor Website Analysis.md`
+- Key findings: guest-checkout login walls are an industry-wide weakness (our WhatsApp-first checkout differentiates); BNPL is table stakes; size-guide detail cuts returns 18-24%; no competitor offers EN+中文 or fabric swatches; dUCk's exit leaves a premium-modest gap
+- Improvement backlog (P0/P1/P2) defined in the Competitor Website Analysis note — P0 items are candidates for the next build iteration
